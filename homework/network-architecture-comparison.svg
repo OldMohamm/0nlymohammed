@@ -1,0 +1,94 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect x="0" y="0" width="800" height="500" fill="#f8f9fa" />
+  
+  <!-- Title -->
+  <text x="400" y="40" font-family="Arial" font-size="24" text-anchor="middle" font-weight="bold">Visual Comparison of Client-Server and Peer-to-Peer Architectures</text>
+  
+  <!-- Divider -->
+  <line x1="400" y1="70" x2="400" y2="480" stroke="#ccc" stroke-width="2" stroke-dasharray="5,5" />
+  
+  <!-- Labels -->
+  <text x="200" y="80" font-family="Arial" font-size="20" text-anchor="middle" font-weight="bold" fill="#4285f4">Client-Server Architecture</text>
+  <text x="600" y="80" font-family="Arial" font-size="20" text-anchor="middle" font-weight="bold" fill="#34a853">Peer-to-Peer Architecture</text>
+  
+  <!-- Client-Server Architecture -->
+  <!-- Server -->
+  <rect x="160" y="150" width="80" height="100" rx="5" ry="5" fill="#4285f4" />
+  <text x="200" y="205" font-family="Arial" font-size="18" text-anchor="middle" fill="white">Server</text>
+  
+  <!-- Clients -->
+  <circle cx="100" cy="320" r="25" fill="#ea4335" />
+  <text x="100" y="325" font-family="Arial" font-size="14" text-anchor="middle" fill="white">Client</text>
+  
+  <circle cx="200" cy="320" r="25" fill="#ea4335" />
+  <text x="200" y="325" font-family="Arial" font-size="14" text-anchor="middle" fill="white">Client</text>
+  
+  <circle cx="300" cy="320" r="25" fill="#ea4335" />
+  <text x="300" y="325" font-family="Arial" font-size="14" text-anchor="middle" fill="white">Client</text>
+  
+  <!-- Connection lines -->
+  <line x1="100" y1="290" x2="180" y2="250" stroke="#666" stroke-width="2" />
+  <line x1="200" y1="290" x2="200" y2="250" stroke="#666" stroke-width="2" />
+  <line x1="300" y1="290" x2="220" y2="250" stroke="#666" stroke-width="2" />
+  
+  <!-- Arrows for data flow -->
+  <path d="M 140 265 L 150 275 L 140 285" fill="none" stroke="#666" stroke-width="2" />
+  <path d="M 200 270 L 190 280 L 180 270" fill="none" stroke="#666" stroke-width="2" />
+  <path d="M 260 265 L 250 275 L 260 285" fill="none" stroke="#666" stroke-width="2" />
+  
+  <!-- Key characteristics -->
+  <rect x="50" y="380" width="300" height="100" rx="5" ry="5" fill="#f1f3f4" stroke="#dadce0" />
+  <text x="200" y="400" font-family="Arial" font-size="14" text-anchor="middle" font-weight="bold">Key Characteristics:</text>
+  <text x="65" y="425" font-family="Arial" font-size="12" text-anchor="start">• Centralized resources and control</text>
+  <text x="65" y="445" font-family="Arial" font-size="12" text-anchor="start">• Clear separation of roles</text>
+  <text x="65" y="465" font-family="Arial" font-size="12" text-anchor="start">• Single point of failure (server)</text>
+  
+  <!-- Peer-to-Peer Architecture -->
+  <!-- Peers -->
+  <circle cx="500" cy="200" r="25" fill="#34a853" />
+  <text x="500" y="205" font-family="Arial" font-size="14" text-anchor="middle" fill="white">Peer</text>
+  
+  <circle cx="600" cy="150" r="25" fill="#34a853" />
+  <text x="600" y="155" font-family="Arial" font-size="14" text-anchor="middle" fill="white">Peer</text>
+  
+  <circle cx="700" cy="200" r="25" fill="#34a853" />
+  <text x="700" y="205" font-family="Arial" font-size="14" text-anchor="middle" fill="white">Peer</text>
+  
+  <circle cx="550" cy="280" r="25" fill="#34a853" />
+  <text x="550" y="285" font-family="Arial" font-size="14" text-anchor="middle" fill="white">Peer</text>
+  
+  <circle cx="650" cy="280" r="25" fill="#34a853" />
+  <text x="650" y="285" font-family="Arial" font-size="14" text-anchor="middle" fill="white">Peer</text>
+  
+  <!-- Connection lines -->
+  <line x1="525" y1="200" x2="575" y2="150" stroke="#666" stroke-width="2" />
+  <line x1="625" y1="150" x2="675" y2="200" stroke="#666" stroke-width="2" />
+  <line x1="700" y1="225" x2="650" y2="255" stroke="#666" stroke-width="2" />
+  <line x1="550" y1="255" x2="500" y2="225" stroke="#666" stroke-width="2" />
+  <line x1="575" y1="280" x2="625" y2="280" stroke="#666" stroke-width="2" />
+  <line x1="525" y1="175" x2="525" y2="175" stroke="#666" stroke-width="0" /> <!-- Placeholder -->
+  
+  <!-- Bidirectional arrows -->
+  <path d="M 550 170 L 560 180 L 550 190" fill="none" stroke="#666" stroke-width="2" />
+  <path d="M 550 190 L 540 180 L 550 170" fill="none" stroke="#666" stroke-width="2" />
+  
+  <path d="M 650 170 L 660 180 L 650 190" fill="none" stroke="#666" stroke-width="2" />
+  <path d="M 650 190 L 640 180 L 650 170" fill="none" stroke="#666" stroke-width="2" />
+  
+  <path d="M 675 240 L 685 230 L 695 240" fill="none" stroke="#666" stroke-width="2" />
+  <path d="M 695 240 L 685 250 L 675 240" fill="none" stroke="#666" stroke-width="2" />
+  
+  <path d="M 525 240 L 515 230 L 505 240" fill="none" stroke="#666" stroke-width="2" />
+  <path d="M 505 240 L 515 250 L 525 240" fill="none" stroke="#666" stroke-width="2" />
+  
+  <path d="M 600 280 L 590 270 L 600 260" fill="none" stroke="#666" stroke-width="2" />
+  <path d="M 600 260 L 610 270 L 600 280" fill="none" stroke="#666" stroke-width="2" />
+  
+  <!-- Key characteristics -->
+  <rect x="450" y="380" width="300" height="100" rx="5" ry="5" fill="#f1f3f4" stroke="#dadce0" />
+  <text x="600" y="400" font-family="Arial" font-size="14" text-anchor="middle" font-weight="bold">Key Characteristics:</text>
+  <text x="465" y="425" font-family="Arial" font-size="12" text-anchor="start">• Decentralized resources and control</text>
+  <text x="465" y="445" font-family="Arial" font-size="12" text-anchor="start">• Each node can be both client and server</text>
+  <text x="465" y="465" font-family="Arial" font-size="12" text-anchor="start">• Resilient to individual node failures</text>
+</svg>

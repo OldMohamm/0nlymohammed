@@ -1,0 +1,791 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Network Homework</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f9f9f9;
+        }
+        
+        /* Cover Page Styles */
+        .cover-page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+            padding: 40px 20px;
+            page-break-after: always;
+        }
+        .cover-container {
+            width: 85%;
+            max-width: 800px;
+            background-color: white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+            margin: auto;
+        }
+        .cover-header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        .university-logo {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 15px;
+            display: block;
+            border-radius: 50%;
+            background-color: white;
+            padding: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .title {
+            font-size: 2.5rem;
+            margin: 20px 0;
+            text-align: center;
+            color: #2a5298;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+        .subtitle {
+            font-size: 1.2rem;
+            color: #2a5298;
+            text-align: center;
+            margin-bottom: 40px;
+            font-weight: 500;
+            direction: rtl;
+        }
+        .department-logo {
+            width: 100px;
+            height: 100px;
+            margin: 30px auto;
+            display: block;
+        }
+        .footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: #2a5298;
+            direction: rtl;
+            border-top: 1px solid #e4e8f0;
+            background-color: #f9fafc;
+        }
+        .footer p {
+            margin: 5px 0;
+            font-size: 1.1rem;
+        }
+        .decorative-element {
+            height: 6px;
+            background: linear-gradient(90deg, #1e3c72 0%, #2a5298 100%);
+            margin: 20px 0;
+        }
+        .content {
+            padding: 40px;
+        }
+        
+        /* Assignment Content Styles */
+        .assignment-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #3498db;
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        h2 {
+            color: #3498db;
+            margin-top: 30px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        h3 {
+            color: #2980b9;
+            margin-top: 20px;
+        }
+        .question {
+            background-color: #f2f9ff;
+            padding: 15px;
+            border-left: 5px solid #3498db;
+            margin-bottom: 25px;
+            border-radius: 0 5px 5px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .answer {
+            background-color: #fff;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .formula {
+            background-color: #f0f7ff;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            margin: 10px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: white;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+            text-align: left;
+            padding: 12px;
+        }
+        td {
+            border: 1px solid #ddd;
+            padding: 12px;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .highlight {
+            background-color: #fffacd;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        .advantages {
+            background-color: #e6ffed;
+            padding: 10px;
+            border-left: 4px solid #28a745;
+            border-radius: 0 4px 4px 0;
+            margin: 10px 0;
+        }
+        .disadvantages {
+            background-color: #fff5f5;
+            padding: 10px;
+            border-left: 4px solid #dc3545;
+            border-radius: 0 4px 4px 0;
+            margin: 10px 0;
+        }
+        .calculation {
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .result {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .diagram {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            background-color: white;
+        }
+        .assignment-footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #7f8c8d;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+        @media print {
+            .cover-page {
+                page-break-after: always;
+            }
+            .assignment-content {
+                page-break-before: always;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Cover Page -->
+    <div class="cover-page">
+        <div class="cover-container">
+            <div class="cover-header">
+                <img src="logo.gif" alt="University Logo" class="university-logo">
+            </div>
+            
+            <div class="content">
+                <div class="decorative-element"></div>
+                
+                <h1 class="title">Computer Network Homework</h1>
+                
+                <h2 class="subtitle">إعداد الطالب: محمد عامر سعدون</h2>
+                
+                <img src="logo1.jpg" alt="Department Logo" class="department-logo">
+                
+                <div class="decorative-element"></div>
+            </div>
+            
+            <div class="footer">
+                <p>جامعة النهرين</p>
+                <p>كلية هندسة المعلومات</p>
+                <p>قسم المنظومات</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Assignment Content -->
+    <div class="assignment-content">
+        <div class="header">
+            <h1>Computer Networking Assignment Solutions</h1>
+            <p>Comprehensive answers to the networking questions</p>
+        </div>
+
+    <!-- Question 1 -->
+    <div class="question">
+        <h3>1. If a station in CSMA/CD network is using the nonpersistent method, what can the station do if the medium is busy / idle? What is the advantage and disadvantage of the nonpersistent method?</h3>
+    </div>
+    <div class="answer">
+        <h4>CSMA/CD Nonpersistent Method</h4>
+        
+        <p><strong>When medium is idle:</strong></p>
+        <ul>
+            <li>The station transmits immediately</li>
+        </ul>
+
+        <p><strong>When medium is busy:</strong></p>
+        <ul>
+            <li>The station waits for a random time period before sensing the channel again</li>
+            <li>It does not continuously monitor the channel during this waiting period</li>
+            <li>After the random wait, it senses the channel again and repeats the process</li>
+        </ul>
+
+        <div class="advantages">
+            <h4>Advantages:</h4>
+            <ul>
+                <li>Reduces collision probability compared to 1-persistent method</li>
+                <li>Provides fairer access among competing stations</li>
+                <li>Better channel utilization under high load conditions</li>
+                <li>Minimizes the "clustering" of retransmissions</li>
+            </ul>
+        </div>
+
+        <div class="disadvantages">
+            <h4>Disadvantages:</h4>
+            <ul>
+                <li>Increases delay compared to 1-persistent method</li>
+                <li>Potentially wastes channel capacity when no station transmits during random waiting periods</li>
+                <li>Additional complexity in implementation</li>
+                <li>Performance depends on choosing appropriate random backoff parameters</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="question">
+        <h3>2. Explain why in OSI reference model the communication subnet boundaries include only the Physical, Data link and Network layers, not all the seven layers?</h3>
+    </div>
+    <div class="answer">
+        <p>The OSI reference model includes only Physical, Data Link, and Network layers as subnet boundaries because:</p>
+        
+        <ul>
+            <li><strong>Functional Separation:</strong> These three lower layers handle the physical transmission, framing, and routing of data which are the essential functions of a communication subnet</li>
+            <li><strong>Network Infrastructure:</strong> They define the communication infrastructure independent of the upper layers, allowing for different network implementations to support the same higher-level protocols</li>
+            <li><strong>Transparent Data Transfer:</strong> The subnet provides transparent data transfer, handling only delivery concerns without needing to understand the content or structure of the data</li>
+            <li><strong>End-to-End Principle:</strong> Upper layers (Transport, Session, Presentation, Application) operate end-to-end between source and destination systems and are not concerned with the intermediate network elements</li>
+            <li><strong>Performance and Efficiency:</strong> Implementing only necessary functions in network devices (like routers and switches) keeps them simpler and more efficient</li>
+        </ul>
+        
+        <p>This division also allows network designers to focus on connectivity issues at the lower layers while application developers can focus on higher-level functionality without worrying about the underlying network details.</p>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="question">
+        <h3>3. In OSI reference model, layer x on one machine communicates with layer x on another machine as a peer-to-peer process. Explain why.</h3>
+    </div>
+    <div class="answer">
+        <p>In the OSI reference model, layer x on one machine communicates with layer x on another machine as a peer-to-peer process for the following reasons:</p>
+
+        <ul>
+            <li><strong>Protocol Compatibility:</strong> Each layer implements protocols that communicate only with the same layer on another machine, ensuring compatible processing at both ends</li>
+            <li><strong>Horizontal Communication Model:</strong> Information conceptually flows horizontally between peer layers on different machines</li>
+            <li><strong>Virtual Communication:</strong> This creates virtual communication between peer layers, although no direct physical connection exists between them</li>
+            <li><strong>Interface Standardization:</strong> The approach standardizes interfaces between layers, allowing independent implementation and evolution of each layer</li>
+            <li><strong>Layered Abstraction:</strong> Each layer provides a specific set of services to the layer above and uses services from the layer below</li>
+        </ul>
+
+        <p class="calculation">While conceptually communication is horizontal between peer layers, actual data transfer occurs vertically through the protocol stack, then across the physical medium, and up through the protocol stack on the receiving machine.</p>
+
+        <div class="diagram">
+            <img src="osi-peer-communication.svg" alt="OSI Peer-to-Peer Communication Model">
+            <p style="text-align: center; margin-top: 10px;"><em>Figure: Peer-to-peer communication in the OSI model</em></p>
+        </div>
+        
+
+    <!-- Question 4 -->
+    <div class="question">
+        <h3>4. In a CSMA/CD network with data rate 1Gbps, the maximum distance between any station pair is found to be 500m and the signal propagation speed is equal to 2/3 of the speed of light. To guarantee the detection of collision, find the maximum propagation time, minimum frame transmission time, and minimum frame size (in bytes).</h3>
+    </div>
+    <div class="answer">
+        <h4>CSMA/CD Maximum Propagation Parameters (1 Gbps)</h4>
+        
+        <div class="calculation">
+            <p><strong>Given:</strong></p>
+            <ul>
+                <li>Data rate = 1 Gbps = 10<sup>9</sup> bits/second</li>
+                <li>Maximum distance between stations = 500 m</li>
+                <li>Signal propagation speed = 2/3 × speed of light = 2/3 × 3×10<sup>8</sup> m/s = 2×10<sup>8</sup> m/s</li>
+            </ul>
+
+            <p><strong>1. Maximum propagation time:</strong><br>
+            The time for a signal to travel from one station to another at the maximum distance</p>
+            <p class="formula">Propagation time = Distance ÷ Propagation speed = 500 m ÷ (2×10<sup>8</sup> m/s) = 2.5 μs</p>
+
+            <p><strong>2. Minimum frame transmission time:</strong><br>
+            For CSMA/CD to work properly, a station must be transmitting long enough to detect a collision</p>
+            <p class="formula">Minimum frame transmission time = 2 × Maximum propagation time = 2 × 2.5 μs = 5 μs</p>
+            
+            <p>However, Ethernet standard requires a minimum frame transmission time of at least 512 bit times, which is:</p>
+            <p class="formula">512 bits ÷ 1 Gbps = 0.512 μs</p>
+            
+            <p>Since 0.512 μs < 5 μs, the minimum frame transmission time must be 5 μs to guarantee collision detection.</p>
+
+            <p><strong>3. Minimum frame size:</strong></p>
+            <p class="formula">Minimum frame size in bits = Data rate × Minimum frame transmission time<br>
+            = 10<sup>9</sup> bits/second × 5 μs = 5,000 bits</p>
+            
+            <p class="formula">Minimum frame size in bytes = 5,000 bits ÷ 8 bits/byte = 625 bytes</p>
+        </div>
+
+        <div class="result">
+            <p>Therefore:</p>
+            <ul>
+                <li>Maximum propagation time = 2.5 μs</li>
+                <li>Minimum frame transmission time = 5 μs</li>
+                <li>Minimum frame size = 625 bytes</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="question">
+        <h3>5. Consider a CSMA/CD network that transmits data at a rate of 10 Mbps over a 1km (kilometer) cable with no repeaters. If the minimum frame size in this network is 1250 bytes, what is the signal propagation speed (km/sec) of this cable?</h3>
+    </div>
+    <div class="answer">
+        <div class="calculation">
+            <p><strong>Given:</strong></p>
+            <ul>
+                <li>Data rate = 10 Mbps = 10 × 10<sup>6</sup> bits/second</li>
+                <li>Cable length = 1 km = 1,000 m</li>
+                <li>Minimum frame size = 1,250 bytes = 1,250 × 8 = 10,000 bits</li>
+            </ul>
+
+            <p><strong>Step 1:</strong> Calculate the frame transmission time</p>
+            <p class="formula">Frame transmission time = Frame size ÷ Data rate<br>
+            = 10,000 bits ÷ 10 × 10<sup>6</sup> bits/second = 0.001 seconds = 1 ms</p>
+
+            <p><strong>Step 2:</strong> Apply the CSMA/CD constraint <br>
+            For CSMA/CD to work, a station must be able to detect a collision before it finishes transmitting. This means:</p>
+            <p class="formula">2 × Propagation time ≤ Transmission time</p>
+
+            <p>Where propagation time is the time it takes for a signal to traverse the cable:</p>
+            <p class="formula">Propagation time = Cable length ÷ Signal propagation speed = 1,000 m ÷ v</p>
+
+            <p><strong>Step 3:</strong> Solve for the minimum signal propagation speed (v)</p>
+            <p class="formula">2 × (1,000 m ÷ v) ≤ 0.001 seconds<br>
+            2,000 m ÷ v ≤ 0.001 seconds<br>
+            v ≥ 2,000 m ÷ 0.001 seconds<br>
+            v ≥ 2,000,000 m/s = 2,000 km/s</p>
+        </div>
+
+        <div class="result">
+            <p>Therefore, the signal propagation speed must be at least 2,000 km/s to ensure proper collision detection in this CSMA/CD network.</p>
+        </div>
+    </div>
+
+    <!-- Question 6 -->
+    <div class="question">
+        <h3>6. In Figure 1, the data rate is 10 Mbps, the distance between station A and Z is 2000 m, and the propagation speed is 2 × 10<sup>8</sup> m/s. Station A starts sending a long frame at time t1 =0, station Z starts sending a long frame at time t2 =3μs. The size of the frame is long enough to guarantee the detection of collision by both stations. Find:</h3>
+        <ol type="i">
+            <li>The time when station A hears the collision</li>
+            <li>The time when station Z hears the collision</li>
+            <li>The number of bits station A has sent before detecting the collision</li>
+            <li>The number of bits station Z has sent before detecting the collision</li>
+        </ol>
+    </div>
+    <div class="answer">
+        <div class="calculation">
+            <p><strong>Given:</strong></p>
+            <ul>
+                <li>Data rate = 10 Mbps = 10 × 10<sup>6</sup> bits/second</li>
+                <li>Distance between stations = 2,000 m</li>
+                <li>Propagation speed = 2 × 10<sup>8</sup> m/s</li>
+                <li>Station A starts transmission at t1 = 0</li>
+                <li>Station Z starts transmission at t2 = 3 μs</li>
+            </ul>
+
+            <p><strong>Step 1:</strong> Calculate one-way propagation time between stations</p>
+            <p class="formula">Propagation time = Distance ÷ Propagation speed<br>
+            = 2,000 m ÷ (2 × 10<sup>8</sup> m/s) = 10 μs</p>
+
+            <p><strong>i. Time when station A hears the collision:</strong></p>
+            <p>The collision occurs when A's signal reaches Z at the same time Z is transmitting. Z started transmitting at t = 3 μs. Station A will detect the collision when Z's signal reaches A, which takes another 10 μs propagation time.</p>
+            <p class="formula">Time when A hears collision = t2 + Propagation time = 3 μs + 10 μs = 13 μs</p>
+
+            <p><strong>ii. Time when station Z hears the collision:</strong></p>
+            <p>The collision actually occurs at Z's location at time t = 10 μs (when A's signal reaches Z). Station Z will detect this collision immediately since it is already transmitting at its own location.</p>
+            <p class="formula">Time when Z hears collision = Propagation time = 10 μs</p>
+
+            <p><strong>iii. Number of bits station A has sent before detecting the collision:</strong></p>
+            <p class="formula">Bits sent by A = Data rate × Time before A detects collision<br>
+            = 10 × 10<sup>6</sup> bits/s × 13 × 10<sup>-6</sup> s = 130 bits</p>
+
+            <p><strong>iv. Number of bits station Z has sent before detecting the collision:</strong></p>
+            <p class="formula">Bits sent by Z = Data rate × (Time before Z detects collision - Z's start time)<br>
+            = 10 × 10<sup>6</sup> bits/s × (10 - 3) × 10<sup>-6</sup> s = 70 bits</p>
+        </div>
+
+        <div class="result">
+            <ul>
+                <li>The time when station A hears the collision: 13 μs</li>
+                <li>The time when station Z hears the collision: 10 μs</li>
+                <li>The number of bits station A has sent before detecting the collision: 130 bits</li>
+                <li>The number of bits station Z has sent before detecting the collision: 70 bits</li>
+            </ul>
+        </div>
+
+        <div class="diagram">
+            <img src="fixed-collision-detection-timeline.svg" alt="CSMA/CD Collision Timeline">
+            <p style="text-align: center; margin-top: 10px;"><em>Figure: Timeline showing transmission and collision detection</em></p>
+        </div>
+    </div>
+
+    <!-- Question 7 -->
+    <div class="question">
+        <h3>7. In a network that implements the Ethernet protocol, what can the station do if the medium is busy/idle?</h3>
+    </div>
+    <div class="answer">
+        <p>In an Ethernet network (which implements CSMA/CD), stations behave as follows:</p>
+
+        <h4>When the medium is idle:</h4>
+        <ul>
+            <li>The station waits for the Interframe Gap (IFG) period (96 bit times or 9.6 μs in 10 Mbps Ethernet)</li>
+            <li>After the IFG, the station can begin transmission immediately</li>
+        </ul>
+
+        <h4>When the medium is busy:</h4>
+        <ul>
+            <li>The station must defer transmission until the channel is idle</li>
+            <li>Once the medium becomes idle, the station waits for the Interframe Gap (IFG)</li>
+            <li>After the IFG, if this is the first transmission attempt, the station transmits immediately</li>
+            <li>If this is a retransmission after a collision, the station applies the Binary Exponential Backoff algorithm:
+                <ul>
+                    <li>Wait for a random number of slot times (where slot time = 512 bit times)</li>
+                    <li>The random number is chosen from the range [0, 2<sup>k</sup> - 1], where k = min(n, 10) and n is the number of collision attempts</li>
+                    <li>After 16 attempts, the transmission is aborted and an error is reported</li>
+                </ul>
+            </li>
+        </ul>
+
+        <p>During transmission, the station continues to monitor the channel for collisions. If a collision is detected:</p>
+        <ul>
+            <li>The station transmits a 32-bit jam signal to ensure all stations detect the collision</li>
+            <li>The station increments its collision counter and schedules a retransmission using the backoff algorithm</li>
+        </ul>
+    </div>
+
+    <!-- Question 8 -->
+    <div class="question">
+        <h3>8. Clarify the difference between the client-server and peer-to-peer models.</h3>
+    </div>
+    <div class="answer">
+        <table>
+            <tr>
+                <th style="width: 20%;">Aspect</th>
+                <th style="width: 40%;">Client-Server Model</th>
+                <th style="width: 40%;">Peer-to-Peer Model</th>
+            </tr>
+            <tr>
+                <td><strong>Architecture</strong></td>
+                <td>Centralized with dedicated servers providing resources and services</td>
+                <td>Decentralized where each node can be both client and server</td>
+            </tr>
+            <tr>
+                <td><strong>Roles</strong></td>
+                <td>Clear separation between clients (request services) and servers (provide services)</td>
+                <td>Each peer can both request and provide services simultaneously</td>
+            </tr>
+            <tr>
+                <td><strong>Resource Sharing</strong></td>
+                <td>Resources are concentrated on and managed by servers</td>
+                <td>Resources are distributed across the network with each peer contributing</td>
+            </tr>
+            <tr>
+                <td><strong>Dependency</strong></td>
+                <td>Clients depend on servers; server failure affects all clients</td>
+                <td>No central dependency; more resilient to single point failures</td>
+            </tr>
+            <tr>
+                <td><strong>Management</strong></td>
+                <td>Centralized administration and control makes management easier</td>
+                <td>Distributed management makes overall control more challenging</td>
+            </tr>
+            <tr>
+                <td><strong>Scalability</strong></td>
+                <td>May require hardware upgrades of central servers to accommodate growth</td>
+                <td>Scales naturally as new peers join and contribute resources</td>
+            </tr>
+            <tr>
+                <td><strong>Security</strong></td>
+                <td>Better security through centralized control and enforcement</td>
+                <td>More challenging to secure due to distributed nature and numerous access points</td>
+            </tr>
+            <tr>
+                <td><strong>Performance</strong></td>
+                <td>Can become bottlenecked during high demand periods</td>
+                <td>Performance can improve with more peers but may be unpredictable</td>
+            </tr>
+            <tr>
+                <td><strong>Examples</strong></td>
+                <td>Web servers, email servers, database servers, file servers</td>
+                <td>BitTorrent, early Napster, blockchain networks, distributed computing projects</td>
+            </tr>
+        </table>
+
+        <div class="diagram">
+            <img src="network-architecture-comparison.svg" alt="Client-Server vs Peer-to-Peer Models">
+            <p style="text-align: center; margin-top: 10px;"><em>Figure: Visual comparison of Client-Server and Peer-to-Peer architectures</em></p>
+        </div>
+    </div>
+
+    <!-- Question 9 -->
+    <div class="question">
+        <h3>9. What is the main difference between computer network and distributed system? Support you answer with example for each one.</h3>
+    </div>
+    <div class="answer">
+        <table>
+            <tr>
+                <th style="width: 20%;">Aspect</th>
+                <th style="width: 40%;">Computer Network</th>
+                <th style="width: 40%;">Distributed System</th>
+            </tr>
+            <tr>
+                <td><strong>Definition</strong></td>
+                <td>A collection of autonomous computers connected by communication facilities</td>
+                <td>A collection of independent computers appearing to users as a single coherent system</td>
+            </tr>
+            <tr>
+                <td><strong>Primary Focus</strong></td>
+                <td>Connecting hardware and transfer of data between distinct devices</td>
+                <td>Providing a unified computing environment that abstracts underlying complexities</td>
+            </tr>
+            <tr>
+                <td><strong>User Awareness</strong></td>
+                <td>Users are aware of the multiplicity of machines and must explicitly access different systems</td>
+                <td>Transparency is maintained - users are unaware of the underlying distribution of resources</td>
+            </tr>
+            <tr>
+                <td><strong>System Management</strong></td>
+                <td>Each computer has its own operating system and is managed independently</td>
+                <td>Systems are coordinated centrally with distributed components working together</td>
+            </tr>
+            <tr>
+                <td><strong>Component Interaction</strong></td>
+                <td>Components interact through explicit communication protocols</td>
+                <td>Components interact through a unified system interface and middleware</td>
+            </tr>
+            <tr>
+                <td><strong>Example</strong></td>
+                <td>The Internet connecting various devices where users clearly access different websites on separate servers</td>
+                <td>Cloud computing services like AWS where applications run on multiple servers but users interact with them as if they were a single system</td>
+            </tr>
+            <tr>
+                <td><strong>Another Example</strong></td>
+                <td>A corporate network with separate file servers, print servers, and application servers that users must connect to individually</td>
+                <td>Google's search infrastructure where thousands of servers work together to provide a single search service</td>
+            </tr>
+        </table>
+
+        <h4>Key Analogy:</h4>
+        <p>A computer network is like a phone system where you have to dial different numbers to reach different people, while a distributed system is like calling a single company number where calls are routed internally without you needing to know the structure.</p>
+
+        <div class="diagram">
+            <img src="network-vs-distributed-systems.svg" alt="Network vs Distributed System">
+            <p style="text-align: center; margin-top: 10px;"><em>Figure: Comparison of computer networks and distributed systems architecture</em></p>
+        </div>
+    </div>
+
+    <!-- Question 10 -->
+    <div class="question">
+        <h3>10. In OSI reference model, list the main and related responsibilities of each of its seven layers.</h3>
+    </div>
+    <div class="answer">
+        <table>
+            <tr>
+                <th>Layer</th>
+                <th>Name</th>
+                <th>Main Responsibilities</th>
+                <th>Related Functions</th>
+            </tr>
+            <tr>
+                <td style="text-align: center;"><strong>7</strong></td>
+                <td><strong>Application</strong></td>
+                <td>
+                    <ul>
+                        <li>Providing network services to end-user applications</li>
+                        <li>User interface to network services</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>Resource sharing and device redirection</li>
+                        <li>File transfer, email, remote login</li>
+                        <li>Network management</li>
+                        <li>Directory services</li>
+                        <li>Application protocols (HTTP, FTP, SMTP, Telnet)</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: center;"><strong>6</strong></td>
+                <td><strong>Presentation</strong></td>
+                <td>
+                    <ul>
+                        <li>Data format translation</li>
+                        <li>Data encryption/decryption</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>Character code translation (ASCII, EBCDIC, Unicode)</li>
+                        <li>Data compression/decompression</li>
+                        <li>Data encryption standards</li>
+                        <li>MIME encoding</li>
+                        <li>Graphics formats (GIF, JPEG, PNG)</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: center;"><strong>5</strong></td>
+                <td><strong>Session</strong></td>
+                <td>
+                    <ul>
+                        <li>Establishing, managing, and terminating sessions</li>
+                        <li>Dialog control and synchronization</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>Session establishment, maintenance, and release</li>
+                        <li>Session recovery</li>
+                        <li>Dialog discipline (half-duplex, full-duplex)</li>
+                        <li>Checkpointing for long data transfers</li>
+                        <li>Remote procedure calls</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: center;"><strong>4</strong></td>
+                <td><strong>Transport</strong></td>
+                <td>
+                    <ul>
+                        <li>End-to-end connection</li>
+                        <li>Reliable data delivery</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>Error detection and recovery</li>
+                        <li>Flow control</li>
+                        <li>Segmentation and reassembly</li>
+                        <li>Multiplexing and demultiplexing</li>
+                        <li>Connection-oriented vs. connectionless service</li>
+                        <li>TCP/UDP implementation</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: center;"><strong>3</strong></td>
+                <td><strong>Network</strong></td>
+                <td>
+                    <ul>
+                        <li>Routing and logical addressing</li>
+                        <li>Path determination through the network</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>Packet switching and routing</li>
+                        <li>Network congestion control</li>
+                        <li>IP addressing and subnetting</li>
+                        <li>Fragmentation and reassembly</li>
+                        <li>Quality of service</li>
+                        <li>Multicast group management</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: center;"><strong>2</strong></td>
+                <td><strong>Data Link</strong></td>
+                <td>
+                    <ul>
+                        <li>Physical addressing</li>
+                        <li>Error detection and correction</li>
+                        <li>Access to media</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>MAC addressing</li>
+                        <li>Framing</li>
+                        <li>Error control (CRC)</li>
+                        <li>Flow control</li>
+                        <li>Media access control protocols (CSMA/CD, CSMA/CA)</li>
+                        <li>Switching (bridges, switches)</li>
+                        <li>Virtual LANs (VLANs)</li>
+                        <li>Point-to-Point Protocol (PPP)</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: center;"><strong>1</strong></td>
+                <td><strong>Physical</strong></td>
+                <td>
+                    <ul>
+                        <li>Transmission of raw bit stream</li>
+                        <li>Physical connections</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>Physical network topology</li>
+                        <li>Cables, connectors, pins, voltage levels</li>
+                        <li>Bit synchronization</li>
+                        <li>Transmission rate (bandwidth)</li>
+                        <li>Transmission mode (simplex, half-duplex, full-duplex)</li>
+                        <li>Physical encoding (digital signals to electrical/optical)</li>
+                        <li>Network interface cards (NICs)</li>
+                        <li>Physical network devices (hubs, repeaters)</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </div>

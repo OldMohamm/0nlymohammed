@@ -1,0 +1,98 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect x="0" y="0" width="800" height="500" fill="#f9f9f9" />
+  
+  <!-- Title -->
+  <text x="400" y="40" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#2c3e50">Peer-to-Peer Communication in the OSI Model</text>
+  
+  <!-- Computer A -->
+  <rect x="50" y="90" width="200" height="350" rx="10" fill="#e6f7ff" stroke="#3498db" stroke-width="2" />
+  <text x="150" y="120" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#2c3e50">System A</text>
+  
+  <!-- Computer B -->
+  <rect x="550" y="90" width="200" height="350" rx="10" fill="#e6f7ff" stroke="#3498db" stroke-width="2" />
+  <text x="650" y="120" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#2c3e50">System B</text>
+  
+  <!-- Network Medium -->
+  <rect x="250" y="380" width="300" height="50" fill="#d4f3d9" stroke="#28a745" stroke-width="2" />
+  <text x="400" y="410" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#2c3e50">Physical Medium</text>
+  
+  <!-- OSI Layers Computer A -->
+  <rect x="65" y="140" width="170" height="40" fill="#f8d7da" stroke="#dc3545" stroke-width="1" />
+  <text x="150" y="165" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#2c3e50">Application (7)</text>
+  
+  <rect x="65" y="180" width="170" height="40" fill="#ffeeba" stroke="#ffc107" stroke-width="1" />
+  <text x="150" y="205" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#2c3e50">Presentation (6)</text>
+  
+  <rect x="65" y="220" width="170" height="40" fill="#c3e6cb" stroke="#28a745" stroke-width="1" />
+  <text x="150" y="245" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#2c3e50">Session (5)</text>
+  
+  <rect x="65" y="260" width="170" height="40" fill="#bee5eb" stroke="#17a2b8" stroke-width="1" />
+  <text x="150" y="285" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#2c3e50">Transport (4)</text>
+  
+  <rect x="65" y="300" width="170" height="40" fill="#d6d8db" stroke="#6c757d" stroke-width="1" />
+  <text x="150" y="325" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#2c3e50">Network (3)</text>
+  
+  <rect x="65" y="340" width="170" height="40" fill="#f5c6cb" stroke="#dc3545" stroke-width="1" />
+  <text x="150" y="365" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#2c3e50">Data Link (2)</text>
+  
+  <rect x="65" y="380" width="170" height="40" fill="#b8daff" stroke="#007bff" stroke-width="1" />
+  <text x="150" y="405" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#2c3e50">Physical (1)</text>
+  
+  <!-- OSI Layers Computer B -->
+  <rect x="565" y="140" width="170" height="40" fill="#f8d7da" stroke="#dc3545" stroke-width="1" />
+  <text x="650" y="165" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#2c3e50">Application (7)</text>
+  
+  <rect x="565" y="180" width="170" height="40" fill="#ffeeba" stroke="#ffc107" stroke-width="1" />
+  <text x="650" y="205" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#2c3e50">Presentation (6)</text>
+  
+  <rect x="565" y="220" width="170" height="40" fill="#c3e6cb" stroke="#28a745" stroke-width="1" />
+  <text x="650" y="245" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#2c3e50">Session (5)</text>
+  
+  <rect x="565" y="260" width="170" height="40" fill="#bee5eb" stroke="#17a2b8" stroke-width="1" />
+  <text x="650" y="285" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#2c3e50">Transport (4)</text>
+  
+  <rect x="565" y="300" width="170" height="40" fill="#d6d8db" stroke="#6c757d" stroke-width="1" />
+  <text x="650" y="325" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#2c3e50">Network (3)</text>
+  
+  <rect x="565" y="340" width="170" height="40" fill="#f5c6cb" stroke="#dc3545" stroke-width="1" />
+  <text x="650" y="365" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#2c3e50">Data Link (2)</text>
+  
+  <rect x="565" y="380" width="170" height="40" fill="#b8daff" stroke="#007bff" stroke-width="1" />
+  <text x="650" y="405" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#2c3e50">Physical (1)</text>
+  
+  <!-- Peer-to-peer communication arrows -->
+  <!-- Application layer -->
+  <line x1="235" y1="160" x2="565" y2="160" stroke="#dc3545" stroke-width="2" stroke-dasharray="5,5" />
+  <polygon points="555,160 565,160 560,155 560,165" fill="#dc3545" />
+  <text x="400" y="155" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2c3e50">Virtual Communication</text>
+  
+  <!-- Presentation layer -->
+  <line x1="235" y1="200" x2="565" y2="200" stroke="#ffc107" stroke-width="2" stroke-dasharray="5,5" />
+  <polygon points="555,200 565,200 560,195 560,205" fill="#ffc107" />
+  
+  <!-- Session layer -->
+  <line x1="235" y1="240" x2="565" y2="240" stroke="#28a745" stroke-width="2" stroke-dasharray="5,5" />
+  <polygon points="555,240 565,240 560,235 560,245" fill="#28a745" />
+  
+  <!-- Transport layer -->
+  <line x1="235" y1="280" x2="565" y2="280" stroke="#17a2b8" stroke-width="2" stroke-dasharray="5,5" />
+  <polygon points="555,280 565,280 560,275 560,285" fill="#17a2b8" />
+  
+  <!-- Network layer -->
+  <line x1="235" y1="320" x2="565" y2="320" stroke="#6c757d" stroke-width="2" stroke-dasharray="5,5" />
+  <polygon points="555,320 565,320 560,315 560,325" fill="#6c757d" />
+  
+  <!-- Data Link layer -->
+  <line x1="235" y1="360" x2="565" y2="360" stroke="#dc3545" stroke-width="2" stroke-dasharray="5,5" />
+  <polygon points="555,360 565,360 560,355 560,365" fill="#dc3545" />
+  
+  <!-- Physical data path -->
+  <path d="M 150,420 L 150,450 L 400,450 L 650,450 L 650,420" stroke="#007bff" stroke-width="4" fill="none" />
+  <text x="400" y="470" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#2c3e50">Actual Physical Data Path</text>
+  
+  <!-- Legend -->
+  <rect x="250" y="30" width="300" height="50" rx="5" fill="white" stroke="#3498db" stroke-width="1" />
+  <line x1="260" y1="50" x2="290" y2="50" stroke="#dc3545" stroke-width="2" stroke-dasharray="5,5" />
+  <text x="400" y="55" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2c3e50">Peer-to-peer virtual communication</text>
+</svg>
